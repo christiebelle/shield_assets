@@ -1,5 +1,9 @@
+<a href="/heroes/new">Add New Hero</a>
+
 <% @heroes.each do |hero| %>
   <p>Name: <%= hero.name %></p>
   <p>Secret Identity: <%= hero.secret_identity %></p>
+  <p>Squad: <%= hero.squad.name %></p>
+  <img src="<%= hero.squad.logo_url %>" alt="<%= hero.squad.name %>" height="150px">
   <hr />
 <% end %>

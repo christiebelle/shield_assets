@@ -2,6 +2,11 @@ require("sinatra")
 require("sinatra/contrib/all")
 
 require_relative("./models/Hero")
+require_relative("./models/Squad")
+
+get "/" do
+  erb(:home)
+end
 
 get "/heroes" do
   @heroes = Hero.all()
@@ -9,6 +14,7 @@ get "/heroes" do
 end
 
 get "/heroes/new" do
+  @squads = Squad.all()
   erb(:new)
 end
 
@@ -16,4 +22,9 @@ post "/heroes/new" do
   new_hero = Hero.new(params)
   new_hero.save()
   redirect to "/heroes"
+end
+
+get "/squads" do
+  @squads = Squad.all()
+  erb(:squad_index)
 end

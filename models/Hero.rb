@@ -1,4 +1,5 @@
 require_relative("../db/sql_runner")
+require_relative("./squad")
 
 class Hero
 
@@ -19,9 +20,9 @@ class Hero
   end
 
   def squad
-    sql = "SELECT name FROM squads WHERE id = $1;"
+    sql = "SELECT * FROM squads WHERE id = $1;"
     values = [@squad_id]
-    return SqlRunner.run(sql, values).first["name"]
+    return Squad.new(SqlRunner.run(sql, values).first)
   end
 
   def self.find(id)

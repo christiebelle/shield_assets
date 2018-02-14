@@ -10,13 +10,12 @@
   <input type="text" name="skill" id="skill" placeholder="Enter skill...">
 
   <label for="squad">Squad:</label>
-  <select name="squad">
-    <option>Justice League</option>
-    <option>Avengers</option>
-    <option>Legion of Superheroes</option>
-    <option>Original Team Arrow</option>
-    <option>Suicide Squad</option>
-    <option>H.Y.D.R.A.</option>
+  <select name="squad_id">
+
+    <% @squads.each do |squad| %>
+      <option value="<%= squad.id %>"><%= squad.name %></option>
+    <% end %>
+
   </select>
 
   <input type="submit" value="Submit">

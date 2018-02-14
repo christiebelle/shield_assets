@@ -1,0 +1,16 @@
+body {
+  background: url(http://markinternational.info/data/out/759/225700113-marvel-shield-logo-wallpaper.jpg);
+  color: #FFFAFA;
+}
+
+nav li {
+  display: inline;
+}
+
+a, a:link, a:visited {
+  color: #FFFAFA;
+}
+
+a:hover, a:active, a:focus {
+  color: #EE0C72;
+}
