@@ -1,8 +1,10 @@
 require("pry-byebug")
 
 require_relative("../models/Hero")
+require_relative("../models/Squad")
 
 Hero.delete_all()
+Squad.delete_all()
 
 supergirl = Hero.new({
     "name" => "SuperGirl",
@@ -30,8 +32,12 @@ black_widow = Hero.new({
 
 black_widow.save()
 
-# Hero.all()
-# Hero.find(id)
+avengers = Squad.new({
+  "name" => "The Avengers",
+  "logo_url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Symbol_from_Marvel%27s_The_Avengers_logo.svg/2000px-Symbol_from_Marvel%27s_The_Avengers_logo.svg.png"
+})
+
+avengers.save()
 
 binding.pry
 nil
