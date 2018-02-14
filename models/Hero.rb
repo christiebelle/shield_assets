@@ -16,6 +16,18 @@ class Hero
     @id = SqlRunner.run(sql, values).first()["id"].to_i
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM heroes WHERE id = $1;"
+    values = [id]
+    return Hero.new(SqlRunner.run(sql, values).first)
+  end
+
+  def self.all()
+    sql = "SELECT * FROM heroes;"
+    list = SqlRunner.run(sql)
+    return list.map { |hero| Hero.new(hero) }
+  end
+
   def self.delete_all()
     sql = "DELETE FROM heroes;"
     SqlRunner.run(sql)

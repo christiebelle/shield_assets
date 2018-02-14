@@ -1,3 +1,5 @@
+require("pry-byebug")
+
 require_relative("../models/Hero")
 
 Hero.delete_all()
@@ -27,3 +29,9 @@ black_widow = Hero.new({
 })
 
 black_widow.save()
+
+# Hero.all()
+# Hero.find(id)
+
+binding.pry
+nil
