@@ -28,3 +28,13 @@ get "/squads" do
   @squads = Squad.all()
   erb(:squad_index)
 end
+
+get "/squads/new" do
+  erb(:squad_new)
+end
+
+post "/squads/new" do
+  new_squad = Squad.new(params)
+  new_squad.save()
+  redirect to "/squads"
+end
