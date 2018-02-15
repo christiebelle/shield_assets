@@ -1,10 +1,20 @@
-body {
-  background: url(http://markinternational.info/data/out/759/225700113-marvel-shield-logo-wallpaper.jpg);
+html {
+  background: url(http://nothingbutgeek.com/wp-content/uploads/2016/10/Cua07lEUkAA4OSO.jpg) no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 100%;
+  width: 100%;
   color: #FFFAFA;
 }
 
+nav ul {
+  display: flex;
+}
+
 nav li {
-  display: inline;
+  flex-direction: space-around;
+  width: 14%;
+  list-style: none;
 }
 
 a, a:link, a:visited {
@@ -13,4 +23,9 @@ a, a:link, a:visited {
 
 a:hover, a:active, a:focus {
   color: #EE0C72;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
 }

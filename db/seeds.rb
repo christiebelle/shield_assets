@@ -8,7 +8,7 @@ Squad.delete_all()
 
 avengers = Squad.new({
   "name" => "The Avengers",
-  "logo_url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Symbol_from_Marvel%27s_The_Avengers_logo.svg/2000px-Symbol_from_Marvel%27s_The_Avengers_logo.svg.png"
+  "logo_url" => "http://thriftyzone.thriftysigns.netdna-cdn.com/image/cache/data/decals/movies-tv/avengers-logo-decal-sticker-avengers-logo-500x500.png"
 })
 avengers.save()
 
