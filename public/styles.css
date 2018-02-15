@@ -2,6 +2,7 @@ html {
   background: url(http://nothingbutgeek.com/wp-content/uploads/2016/10/Cua07lEUkAA4OSO.jpg) no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+  background-attachment: fixed;
   height: 100%;
   width: 100%;
   color: #FFFAFA;
@@ -28,4 +29,16 @@ a:hover, a:active, a:focus {
 h1 {
   display: flex;
   justify-content: center;
+}
+
+div.container {
+  width: 150px;
+  margin-left: 575px;
+  margin-top: 350px;
+}
+
+div.buttons {
+  width: 150px;
+  margin-left: 575px;
+  margin-top: 50px;
 }
