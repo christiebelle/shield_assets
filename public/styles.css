@@ -42,3 +42,9 @@ div.buttons {
   margin-left: 575px;
   margin-top: 50px;
 }
+
+div.history {
+  font-family: Tahoma;
+  width: 300px;
+  margin-left: 15px;
+}

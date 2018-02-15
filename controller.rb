@@ -8,6 +8,10 @@ get "/" do
   erb(:home)
 end
 
+get "/about" do
+  erb(:about)
+end
+
 get "/heroes" do
   @heroes = Hero.all()
   erb(:index)

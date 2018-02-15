@@ -13,7 +13,7 @@ CREATE TABLE heroes (
   name VARCHAR(255),
   secret_identity VARCHAR(255),
   skill VARCHAR(255),
-  squad_id INT REFERENCES squads(id) NOT NULL
+  squad_id INT REFERENCES squads(id) ON DELETE CASCADE
 );
 
 CREATE TABLE villains (
@@ -21,5 +21,5 @@ CREATE TABLE villains (
   name VARCHAR(255),
   evil_identity VARCHAR(255),
   skill VARCHAR(255),
-  squad_id INT REFERENCES squads(id) NOT NULL
+  squad_id INT REFERENCES squads(id) ON DELETE CASCADE
 );
