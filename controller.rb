@@ -38,3 +38,7 @@ post "/squads/new" do
   new_squad.save()
   redirect to "/squads"
 end
+
+get "/login" do
+  erb(:login)
+end

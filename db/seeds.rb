@@ -6,11 +6,11 @@ require_relative("../models/Squad")
 Hero.delete_all()
 Squad.delete_all()
 
-avengers = Squad.new({
-  "name" => "The Avengers",
-  "logo_url" => "http://thriftyzone.thriftysigns.netdna-cdn.com/image/cache/data/decals/movies-tv/avengers-logo-decal-sticker-avengers-logo-500x500.png"
+assassins = Squad.new({
+  "name" => "The League of Assassins",
+  "logo_url" => "https://vignette.wikia.nocookie.net/arkhamcity/images/8/8a/LoASymbol.png/revision/latest?cb=20150714165508"
 })
-avengers.save()
+assassins.save()
 
 legion = Squad.new({
   "name" => "The Legion of Superheroes",
@@ -23,6 +23,12 @@ jla = Squad.new({
   "logo_url" => "http://media.comicbook.com/2016/06/30901511-max-186685.jpg"
 })
 jla.save()
+
+ota = Squad.new({
+  "name" => "Original Team Arrow",
+  "logo_url" => "http://images6.fanpop.com/image/photos/36700000/Arrow-CW-image-arrow-cw-36717403-379-500.png"
+})
+ota.save()
 
 supergirl = Hero.new({
     "name" => "SuperGirl",
@@ -40,13 +46,13 @@ wonder_woman = Hero.new({
 })
 wonder_woman.save()
 
-black_widow = Hero.new({
-  "name" => "Black Widow",
-  "secret_identity" => "Natasha Romanov",
-  "skill" => "espionage",
-  "squad_id" => avengers.id
+nyssa = Hero.new({
+  "name" => "Warith Al Ghul",
+  "secret_identity" => "Nyssa Raatko",
+  "skill" => "ninja",
+  "squad_id" => assassins.id
 })
-black_widow.save()
+nyssa.save()
 
 
 
