@@ -1,0 +1,23 @@
+<form action="/villains/new" method="POST">
+
+  <label for="name">Name:</label>
+  <input type="text" name="name" id="name" placeholder="Enter name..." required>
+
+  <label for="evil_identity">Evil Identity:</label>
+  <input type="text" name="evil_identity" id="evil_identity" placeholder="Enter evil indentity...">
+
+  <label for="skill">Skill:</label>
+  <input type="text" name="skill" id="skill" placeholder="Enter skill...">
+
+  <label for="squad">Squad:</label>
+  <select name="squad_id">
+
+    <% @squads.each do |squad| %>
+      <option value="<%= squad.id %>"><%= squad.name %></option>
+    <% end %>
+
+  </select>
+
+  <input type="submit" value="Submit">
+
+</form>

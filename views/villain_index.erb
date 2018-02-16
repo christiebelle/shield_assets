@@ -1,0 +1,9 @@
+<a href="/villains/new">Add New Villain</a>
+
+<% @villains.each do |villain| %>
+  <p>Name: <%= villain.name %></p>
+  <p>Secret Identity: <%= villain.evil_identity %></p>
+  <p>Squad: <%= villain.squad.name %></p>
+  <img src="<%= villain.squad.logo_url %>" alt="<%= villain.squad.name %>" height="150px">
+  <hr />
+<% end %>

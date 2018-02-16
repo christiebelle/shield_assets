@@ -48,3 +48,11 @@ div.history {
   width: 300px;
   margin-left: 15px;
 }
+
+div.image {
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  flex-direction: row;
+  height: 150px;
+}
